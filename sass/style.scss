@@ -1,0 +1,35 @@
+@use "header";
+@use "footer";
+@use "mixin";
+@use "btn";
+@use "view";
+@use "font-color";
+
+.products {
+  font-size: 12px;
+}
+
+.grid_wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2,1fr);
+  justify-content: space-between;
+  gap: 36px;
+  @include mixin.sp {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.product_fig {
+  aspect-ratio: 1 / 1;
+}
+
+.product_title {
+  margin: 10px 0 5px;
+}
+
+.view_more {
+  display: block;
+  text-align: center;
+  margin: 50px 0 100px;
+}

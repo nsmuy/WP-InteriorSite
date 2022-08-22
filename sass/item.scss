@@ -1,0 +1,76 @@
+@use "header";
+@use "view";
+@use "btn";
+@use "mixin";
+@use "title";
+@use "footer";
+@use "font-color";
+
+
+body {
+  position: relative;
+  height: 100vh;
+  @include mixin.sp {
+    height: auto;
+  }
+}
+
+.item_detail {
+  @include mixin.sp {
+    padding-bottom: 160px;
+  }
+}
+
+.item_content {
+  margin-top: 60px;
+  display: flex;
+  margin-bottom: 60px;
+  @include mixin.sp {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.item_fig {
+  max-width: 360px;
+  aspect-ratio: 1 / 1;
+  @include mixin.sp {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.item_text {
+  max-width: 360px;
+  margin-left: 70px;
+  @include mixin.sp {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  p {
+    margin-bottom: 40px;
+  }
+  dl {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  dt {
+    width:25%;
+    font-weight: normal;
+  }
+  dd {
+    width:75%;
+  }
+}
+
+.back_to_products {
+  display: block;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}

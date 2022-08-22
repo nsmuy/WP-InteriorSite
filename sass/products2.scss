@@ -1,0 +1,57 @@
+@use "header";
+@use "view";
+@use "mixin";
+@use "btn";
+@use "title";
+@use "footer";
+@use "font-color";
+
+body {
+  position: relative;
+  height: 100vh;
+  @include mixin.sp {
+    height: auto;
+  }
+}
+
+.products {
+  font-size: 12px;
+  @include mixin.sp {
+    padding-bottom: 120px;
+  }
+}
+
+.grid_wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1,1fr);
+  justify-content: space-between;
+  gap: 36px;
+  @include mixin.sp {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.product_fig {
+  aspect-ratio: 1 / 1;
+}
+
+.product_title {
+  margin: 10px 0 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0 100px;
+  li + li {
+    margin-left: 50px;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
