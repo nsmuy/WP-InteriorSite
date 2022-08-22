@@ -14,7 +14,9 @@
         <?php setup_postdata($post); ?>
         <li>
           <a href="<?php the_permalink(); ?>">
+          <div class="product_img">
             <img src="<?php the_post_thumbnail_url('full'); ?>" alt="">
+          </div>
             <p><?php the_title(); ?></p>
             <p>&yen;<?php echo esc_html(get_post_meta($post->ID, 'price', true)); ?> +tax</p>
           </a>
